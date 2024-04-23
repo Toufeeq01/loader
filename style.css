@@ -25,49 +25,48 @@ ul{
     border-left-width: 5px solid;
     border-color: #000;
     mix-blend-mode: overlay;
-    
-}
-ul li{
-    font-family: Arial, Helvetica, sans-serif;
-    animation: animate 1.5s linear infinite;
-    animation-iteration-count: infinite;
-}
-@keyframes animate{
-    0%{
-        color: #000000;
-        text-shadow: 0 5px 10px rgba(0, 0, 0, .7);
-    }
-    90%{
-        color: #000000;
-        text-shadow: 0 5px 10px rgba(0, 0, 0, .7);
-    }
-    100%{
-        color: #000000;
-        text-shadow: 0 5px 10px rgba(0, 0, 0, .7);
-    }
-}
-ul li:nth-child(1){
-    animation-delay: .2s;
-}
-ul li:nth-child(2){
-    animation-delay: .4s;
-}
-ul li:nth-child(3){
-    animation-delay: .6s;
-}
-ul li:nth-child(4){
-    animation-delay: .8s;
-}
-ul li:nth-child(5){
-    animation-delay: 1s;
-}
-ul li:nth-child(6){
-    animation-delay: 1.2s;
-}
-ul li:nth-child(7){
-    animation-delay: 1.4s;
 }
 
+ul li{
+    font-family: Arial, Helvetica, sans-serif;
+    animation: animate 9s linear infinite; /* Adjusted the animation duration */
+}
+
+@keyframes animate{
+    0%{
+        color: transparent; /* Start with transparent text */
+    }
+    10%{
+        color: #000000; /* Show "L" */
+    }
+    20%{
+        color: transparent; /* Hide "L" */
+    }
+    30%{
+        color: #000000; /* Show "O" */
+    }
+    40%{
+        color: transparent; /* Hide "O" */
+    }
+    50%{
+        color: #000000; /* Show "A" */
+    }
+    60%{
+        color: transparent; /* Hide "A" */
+    }
+    70%{
+        color: #000000; /* Show "D" */
+    }
+    80%{
+        color: transparent; /* Hide "D" */
+    }
+    90%{
+        color: #000000; /* Show "I" */
+    }
+    100%{
+        color: transparent; /* Hide "I" and loop back to the beginning */
+    }
+}
 
 .loader{
     border-radius: 7px ;
@@ -93,9 +92,6 @@ ul li:nth-child(7){
     position: absolute;
     display: block;
 }
-
-
-
 
 .loader span:nth-child(1){
     top: 0;
@@ -165,10 +161,3 @@ ul li:nth-child(7){
         top: -100%;
     }
 }
-
-
-
-
-
-
-
